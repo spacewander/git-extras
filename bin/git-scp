@@ -129,9 +129,16 @@ function reverse_scp()
 	shift
 
 	local _TMP=${0///}
-	echo $@ > $_TMP &&
-		rsync -rlDv --files-from=$_TMP "$(git config remote.$remote.url)/" ./ &&
-		rm $_TMP
+    if [ $# -eq 0 ]
+    then
+        # set '.' as the default value for [<file|directory>]
+        targets='.'
+    else
+        targets=$*
+    fi
+	echo "$targets" > "$_TMP" &&
+		rsync -rlDv --files-from="$_TMP" "$(git config remote.$remote.url)/" ./ &&
+		rm "$_TMP"
 }
 
 function _info()
