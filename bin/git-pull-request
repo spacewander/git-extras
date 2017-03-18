@@ -31,21 +31,28 @@ EOF
 # user
 
 user=$(git config user.email)
+
+if [ -z "$user" ]; then
+  user="$EMAIL"
+fi
+
 test -z "$user" && abort "git config user.email required"
 
 # branch
 
 branch=${1-$(git symbolic-ref HEAD | sed 's/refs\/heads\///')}
+remote=$(git config branch."$branch".remote)
+[ -z "$remote" -o "$remote" == "." ] && abort "the upstream should exist and be a remote branch."
 
 # make sure it's pushed
 
-git push origin "$branch" || abort "failed to push $branch"
+git push "$remote" "$branch" || abort "failed to push $branch"
 
-origin=$(git config remote.origin.url)
-if [[ $origin == git@* ]]; then
-    project=${origin##*:}
+remote_url=$(git config remote."$remote".url)
+if [[ "$remote_url" == git@* ]]; then
+    project=${remote_url##*:}
 else
-    project=${origin#https://*/}
+    project=${remote_url#https://*/}
 fi
 project=${project%.git}
 
