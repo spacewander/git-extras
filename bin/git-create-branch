@@ -2,9 +2,9 @@
 
 # preference takes lowest priority; look for remote from prefs first
 REMOTE_PREF=`git config git-extras.create-branch.remote`
-if [ ${REMOTE_PREF} == "true" ]; then
+if [ "$REMOTE_PREF" == "true" ]; then
 	REMOTE=origin
-elif [ "$REMOTE_PREF" != ""]; then
+elif [ -n "$REMOTE_PREF" ]; then
 	REMOTE=$REMOTE_PREF
 fi
 
@@ -45,6 +45,7 @@ then
 	else
 		echo
 		echo "    Error connecting to remote '$REMOTE': `cat /tmp/ls-remote-error`"
+		echo
 		rm -f /tmp/ls-remote-error
 	fi
 fi
