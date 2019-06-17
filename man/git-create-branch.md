@@ -21,13 +21,11 @@ The name of the branch to create.
 
 ## PREFERENCES
 
-You may save preferences for the `remote` option above by using `git config` with the key `git-extras.create-branch.remote` whose value works like the corresponding option. A value of `true` will use the default remote `origin`. Any other value will represent a remote name.
-
-    $ git config git-extras.create-branch.remote true
+You may save your default preference for the `remote` option above by using `git config` with the key `git-extras.create-branch.remote` whose value will be the default remote when `[-r|--remote]` is not specified.
 
     $ git config git-extras.create-branch.remote upstream
 
-With this preference set, `git-create-branch` will behave as if the `-r|--remote` option were given. The command line option `-r|--remote` will override this preference.
+The command line option `-r|--remote` will override this preference.
 
 ## EXAMPLES
 

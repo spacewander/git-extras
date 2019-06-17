@@ -25,13 +25,11 @@ Setup a remote tracking branch using \fBremote_name\fR\. If \fBremote_name\fR is
 The name of the branch to create\.
 .
 .SH "PREFERENCES"
-You may save preferences for the \fBremote\fR option above by using \fBgit config\fR with the key \fBgit\-extras\.create\-branch\.remote\fR whose value works like the corresponding option\. A value of \fBtrue\fR will use the default remote \fBorigin\fR\. Any other value will represent a remote name\.
+You may save your default preference for the \fBremote\fR option above by using \fBgit config\fR with the key \fBgit\-extras\.create\-branch\.remote\fR whose value will be the default remote when \fB[\-r|\-\-remote]\fR is not specified\.
 .
 .IP "" 4
 .
 .nf
-
-$ git config git\-extras\.create\-branch\.remote true
 
 $ git config git\-extras\.create\-branch\.remote upstream
 .
@@ -40,7 +38,7 @@ $ git config git\-extras\.create\-branch\.remote upstream
 .IP "" 0
 .
 .P
-With this preference set, \fBgit\-create\-branch\fR will behave as if the \fB\-r|\-\-remote\fR option were given\. The command line option \fB\-r|\-\-remote\fR will override this preference\.
+The command line option \fB\-r|\-\-remote\fR will override this preference\.
 .
 .SH "EXAMPLES"
 .

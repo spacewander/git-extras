@@ -2,9 +2,7 @@
 
 # preference takes lowest priority; look for remote from prefs first
 REMOTE_PREF=`git config git-extras.create-branch.remote`
-if [ "$REMOTE_PREF" == "true" ]; then
-	REMOTE=origin
-elif [ -n "$REMOTE_PREF" ]; then
+if [ -n "$REMOTE_PREF" ]; then
 	REMOTE=$REMOTE_PREF
 fi
 
