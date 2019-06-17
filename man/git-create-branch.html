@@ -96,14 +96,12 @@
 
 <h2 id="PREFERENCES">PREFERENCES</h2>
 
-<p>You may save preferences for the <code>remote</code> option above by using <code>git config</code> with the key <code>git-extras.create-branch.remote</code> whose value works like the corresponding option. A value of <code>true</code> will use the default remote <code>origin</code>. Any other value will represent a remote name.</p>
+<p>You may save your default preference for the <code>remote</code> option above by using <code>git config</code> with the key <code>git-extras.create-branch.remote</code> whose value will be the default remote when <code>[-r|--remote]</code> is not specified.</p>
 
-<pre><code>$ git config git-extras.create-branch.remote true
-
-$ git config git-extras.create-branch.remote upstream
+<pre><code>$ git config git-extras.create-branch.remote upstream
 </code></pre>
 
-<p>With this preference set, <code>git-create-branch</code> will behave as if the <code>-r|--remote</code> option were given. The command line option <code>-r|--remote</code> will override this preference.</p>
+<p>The command line option <code>-r|--remote</code> will override this preference.</p>
 
 <h2 id="EXAMPLES">EXAMPLES</h2>
 
@@ -124,8 +122,8 @@ $ git create-branch -r upstream integration
 
 <h2 id="AUTHOR">AUTHOR</h2>
 
-<p>Written by Jonhnny Weslley &lt;<a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x6a;&#119;&#64;&#106;&#x6f;&#110;&#104;&#110;&#x6e;&#x79;&#119;&#101;&#115;&#108;&#108;&#101;&#x79;&#46;&#x6e;&#x65;&#x74;" data-bare-link="true">&#x6a;&#119;&#x40;&#106;&#111;&#110;&#104;&#x6e;&#x6e;&#x79;&#119;&#x65;&#x73;&#108;&#x6c;&#101;&#x79;&#x2e;&#x6e;&#101;&#x74;</a>&gt;
-Modified by Mark Pitman &lt;<a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#109;&#97;&#114;&#107;&#46;&#x70;&#105;&#116;&#x6d;&#97;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;" data-bare-link="true">&#109;&#97;&#x72;&#x6b;&#x2e;&#112;&#105;&#116;&#x6d;&#97;&#x6e;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a>&gt;, Brian Murrell &lt;<a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#98;&#x74;&#x6d;&#117;&#114;&#114;&#x65;&#x6c;&#x6c;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#109;" data-bare-link="true">&#x62;&#116;&#109;&#117;&#114;&#114;&#101;&#x6c;&#x6c;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a>&gt;.</p>
+<p>Written by Jonhnny Weslley &lt;<a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x6a;&#x77;&#64;&#106;&#111;&#x6e;&#x68;&#110;&#110;&#x79;&#x77;&#x65;&#115;&#x6c;&#108;&#101;&#x79;&#46;&#x6e;&#x65;&#116;" data-bare-link="true">&#106;&#x77;&#x40;&#x6a;&#x6f;&#110;&#x68;&#x6e;&#x6e;&#x79;&#119;&#101;&#115;&#x6c;&#108;&#x65;&#121;&#x2e;&#x6e;&#x65;&#116;</a>&gt;
+Modified by Mark Pitman &lt;<a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x6d;&#97;&#x72;&#107;&#x2e;&#112;&#x69;&#116;&#109;&#97;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#x6d;" data-bare-link="true">&#109;&#x61;&#114;&#x6b;&#46;&#112;&#x69;&#116;&#x6d;&#97;&#110;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a>&gt;, Brian Murrell &lt;<a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x62;&#116;&#x6d;&#x75;&#x72;&#x72;&#101;&#x6c;&#x6c;&#64;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;" data-bare-link="true">&#x62;&#x74;&#x6d;&#117;&#114;&#114;&#101;&#x6c;&#x6c;&#64;&#x67;&#x6d;&#x61;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;</a>&gt;.</p>
 
 <h2 id="REPORTING-BUGS">REPORTING BUGS</h2>
 
