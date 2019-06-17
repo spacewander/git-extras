@@ -40,7 +40,7 @@ $ git config git\-extras\.create\-branch\.remote upstream
 .IP "" 0
 .
 .P
-With this preference set, \fBgit\-create\-branch\fR will behave as if the \fB\-r|\-\-remote\fR option were given\.
+With this preference set, \fBgit\-create\-branch\fR will behave as if the \fB\-r|\-\-remote\fR option were given\. The command line option \fB\-r|\-\-remote\fR will override this preference\.
 .
 .SH "EXAMPLES"
 .
@@ -55,7 +55,14 @@ $ git create\-branch \-r upstream integration
 .fi
 .
 .SH "NOTES"
-As of 4\.4\.0, the default behavior has changed\. \fBgit\-create\-branch\fR will no longer automatically setup a remote tracking branch unless the \fB\-r|\-remote\fR option is specified, however this behavior may be obtained by \fBremote\fR preference as described in \fIPreferences\fR section\.
+.
+.IP "\(bu" 4
+As of 4\.4\.0, the default behavior has changed\. \fBgit\-create\-branch\fR will no longer automatically setup a remote tracking branch unless the \fB\-r|\-remote\fR option is specified\. See additional note on preference feature in 4\.8\.0\-dev below\.
+.
+.IP "\(bu" 4
+As of 4\.8\.0\-dev, the \fBremote\fR option can be set via \fBgit config\fR preference as described in \fIPreferences\fR section\.
+.
+.IP "" 0
 .
 .SH "AUTHOR"
 Written by Jonhnny Weslley <\fIjw@jonhnnyweslley\.net\fR> Modified by Mark Pitman <\fImark\.pitman@gmail\.com\fR>, Brian Murrell <\fIbtmurrell@gmail\.com\fR>\.
