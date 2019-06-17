@@ -44,10 +44,10 @@ then
 		exit $?
 	else
 		echo
-		echo "    Error connecting to remote '$REMOTE': `cat /tmp/ls-remote-error`"
+		echo "    Error connecting to remote '$REMOTE': $(</tmp/ls-remote-error)"
 		echo
-		rm -f /tmp/ls-remote-error
 	fi
+	rm -f /tmp/ls-remote-error
 fi
 
 git checkout -b $BRANCH
