@@ -27,7 +27,7 @@ You may save preferences for the `remote` option above by using `git config` wit
 
     $ git config git-extras.create-branch.remote upstream
 
-With this preference set, `git-create-branch` will behave as if the `-r|--remote` option were given.
+With this preference set, `git-create-branch` will behave as if the `-r|--remote` option were given. The command line option `-r|--remote` will override this preference.
 
 ## EXAMPLES
 
@@ -39,7 +39,9 @@ With this preference set, `git-create-branch` will behave as if the `-r|--remote
 
 ## NOTES
 
-As of 4.4.0, the default behavior has changed. `git-create-branch` will no longer automatically setup a remote tracking branch unless the `-r|-remote` option is specified, however this behavior may be obtained by `remote` preference as described in [Preferences](#PREFERENCES) section.
+* As of 4.4.0, the default behavior has changed. `git-create-branch` will no longer automatically setup a remote tracking branch unless the `-r|-remote` option is specified.  See additional note on preference feature in 4.8.0-dev below.
+
+* As of 4.8.0-dev, the `remote` option can be set via `git config` preference as described in [Preferences](#PREFERENCES) section.
 
 ## AUTHOR
 
