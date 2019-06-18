@@ -29,10 +29,28 @@ The command line option `-r|--remote` will override this preference.
 
 ## EXAMPLES
 
+With no remote preference set:
+
+    # creates local branch 'integration'
     $ git create-branch integration
 
+    # creates local & remote branch 'integration' (on default 'origin')
     $ git create-branch -r integration
 
+    # creates local & remote branch 'integration' on 'upstream'
+    $ git create-branch -r upstream integration
+
+With `git-extras.create-branch.remote` preference set to 'lucinda':
+
+    # creates local & remote branch 'integration' (on preference 'lucinda')
+    $ git create-branch integration
+
+    # overriding preference, using default `-r` of 'origin'
+    # creates local & remote branch 'integration' on default 'origin'
+    $ git create-branch -r integration
+
+    # overriding preference, using specified `-r` of 'upstream'
+    # creates local & remote branch 'integration' on 'upstream'
     $ git create-branch -r upstream integration
 
 ## NOTES

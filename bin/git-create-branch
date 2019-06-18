@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+test $# -eq 0 && echo "branch argument required." 1>&2 && exit 1
+
 # preference takes lowest priority; look for remote from prefs first
 REMOTE_PREF=`git config git-extras.create-branch.remote`
 if [ -n "$REMOTE_PREF" ]; then
@@ -24,13 +26,14 @@ do
 	shift
 done
 
+# handle ambiguous `-r` option argument by shift
 if [[ -z $BRANCH ]] && [[ -n $REMOTE ]]
 then
 	BRANCH=$REMOTE
 	REMOTE=origin
 fi
 
-test -z $BRANCH && echo "branch required." 1>&2 && exit 1
+test -z $BRANCH && echo "branch argument required." 1>&2 && exit 1
 if [[ -n $REMOTE ]]
 then
 	git ls-remote --exit-code $REMOTE 1>/dev/null 2>/tmp/ls-remote-error

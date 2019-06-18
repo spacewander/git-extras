@@ -41,16 +41,46 @@ $ git config git\-extras\.create\-branch\.remote upstream
 The command line option \fB\-r|\-\-remote\fR will override this preference\.
 .
 .SH "EXAMPLES"
+With no remote preference set:
+.
+.IP "" 4
 .
 .nf
 
+# creates local branch \'integration\'
 $ git create\-branch integration
 
+# creates local & remote branch \'integration\' (on default \'origin\')
 $ git create\-branch \-r integration
 
+# creates local & remote branch \'integration\' on \'upstream\'
 $ git create\-branch \-r upstream integration
 .
 .fi
+.
+.IP "" 0
+.
+.P
+With \fBgit\-extras\.create\-branch\.remote\fR preference set to \'lucinda\':
+.
+.IP "" 4
+.
+.nf
+
+# creates local & remote branch \'integration\' (on preference \'lucinda\')
+$ git create\-branch integration
+
+# overriding preference, using default `\-r` of \'origin\'
+# creates local & remote branch \'integration\' on default \'origin\'
+$ git create\-branch \-r integration
+
+# overriding preference, using specified `\-r` of \'upstream\'
+# creates local & remote branch \'integration\' on \'upstream\'
+$ git create\-branch \-r upstream integration
+.
+.fi
+.
+.IP "" 0
 .
 .SH "NOTES"
 .
