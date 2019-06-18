@@ -23,7 +23,7 @@ The name of the branch to create.
 
 You may save your default preference for the `remote` option above by using `git config` with the key `git-extras.create-branch.remote` whose value will be the default remote when `[-r|--remote]` is not specified.
 
-    $ git config git-extras.create-branch.remote upstream
+    $ git config git-extras.create-branch.remote lucinda
 
 The command line option `-r|--remote` will override this preference.
 
