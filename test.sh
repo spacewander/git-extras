@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export PATH=$PATH:./bin
 
 git guilt @~10
 git summary
