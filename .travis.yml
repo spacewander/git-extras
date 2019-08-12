@@ -12,3 +12,4 @@ script:
   - cd ../release
   - tar -xzf git-extras-release.tar.gz && make PREFIX=$(pwd) INSTALL_VIA=brew
   - ./bin/git-extras update | grep "brew upgrade git-extras"
+  - ./test.sh
