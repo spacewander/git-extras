@@ -13,6 +13,9 @@ Those dependencies are listed below:
 
 Note that only Homebrew package is maintained by the git-extras developers directly.
 Other packages are maintained by the distribution's packagers or third-party volunteers.
+And their versions are usually not up-to-date.
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/git-extras.svg)](https://repology.org/project/git-extras/versions)
 
 ### Debian
 
